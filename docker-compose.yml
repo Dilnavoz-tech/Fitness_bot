@@ -1,0 +1,31 @@
+version: "3.11"
+
+services:
+  bot:
+    build: .
+    restart: always
+    working_dir: /apps
+    container_name: exam_fit
+    environment:
+      BOT_TOKEN: 6365335287:AAElVll6Mgh8sD0a0RO43JeM4br7JIvYvAc
+      DATABASE: postgres
+      DB_USER: postgres
+      DB_PASSWORD: 1
+      DB_HOST: pg
+      DB_PORT: 5432
+    command: python3 main.py
+
+  pg:
+    image: postgres:15.3-alpine
+    restart: always
+    container_name: pg
+    environment:
+      - POSTGRES_PASSWORD=1
+    volumes:
+      - pg_data:/var/lib/postgresql/data/
+    ports:
+      - "5433:5432"
+
+volumes:
+  pg_data:
+

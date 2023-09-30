@@ -1,0 +1,6 @@
+Celery ochiq manba Python kutubxonasi bo'lib,
+u vazifalarni asinxron tarzda bajarish uchun ishlatiladi.
+Bu vazifalarni ushlab turadigan va ularni ishchilarga to'g'ri taqsimlaydigan vazifa navbatidir.
+U birinchi navbatda real vaqtda ishlashga qaratilgan,
+lekin rejalashtirishni ham qo'llab-quvvatlaydi (muntazam intervalli vazifalarni bajarish).
+
